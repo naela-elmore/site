@@ -4,13 +4,27 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "1 + 1\n\n[1] 2"
+    "text": "This website will be used for the Data Visualization Fall 2022 course."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Naela Elmore",
     "section": "",
-    "text": "par(family = \"sans\")\nplot(iris, pch=20, cex=.75, col=\"steelblue\")"
+    "text": "### Contact me\n\n[naela.elmore@utdallas.edu](mailto:naela.elmore@utdallas.edu)\n\n\n\npar(family = \"sans\")\nplot(iris, pch=20, cex=.75, col=\"steelblue\")"
+  },
+  {
+    "objectID": "assignments.html",
+    "href": "assignments.html",
+    "title": "Assignments",
+    "section": "",
+    "text": "Assignments can be found here …"
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Research",
+    "section": "",
+    "text": "Research interests are …"
   }
 ]
