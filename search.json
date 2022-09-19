@@ -11,7 +11,7 @@
     "href": "assignment2.html",
     "title": "Assignment 2",
     "section": "",
-    "text": "Research interests are …"
+    "text": "Plotting Functions Using the Happy Planet Data set\n\n#importing data into R \nlibrary(readxl)\n\nWarning: package 'readxl' was built under R version 4.1.3\n\nmy_data <- read.csv(\"C:/Users/elmor/Downloads/HPI.csv\")\n\n#column \ncolnames(my_data)<-c(\"hpi_rank\",\"country\",\"iso\",\"year\",\n                    \"continent\", \"population\", \"life_expectancy\",\n                    \"ladder_of_life\", \"ecological_footprint\",\n                    \"hpi\", \"biocapacity_for_year\", \"gdp\")\n\n#na removal\n\n\nmydata <- na.omit(my_data)\n\n#plotting functions\n\nyear <- c(2013, 2014, 2015, 2016, 2017, 2018, 2019)\nhpi_score <- aggregate(hpi ~ year, mydata, mean)\nlife_score  <- aggregate(life_expectancy ~ year, mydata, mean)\nhpi_score <- c(hpi_score$hpi)\nlife_score <- c(life_score$life_expectancy)\n\n# Setting the parameter\npar(mfrow=c(3, 2))\n\n#labeling, margins c(bottom, left, top, right) & size\npar(las=1, mar=c(4, 4, 2, 4), cex=.7) \nplot.new()\nplot.window(range(year), c(40, 80))\nlines(year, hpi_score)\nlines(year, life_score)\npoints(year, hpi_score, pch=17, bg = \"blue\", cex=4)  \npoints(year, life_score, pch=21, bg =\"red\", cex=4) \npar(col=\"gray50\", fg=\"gray50\", col.axis=\"gray50\")\naxis(1, at=seq(2013, 2019, 2)) \naxis(2, at=seq(40, 80, 10))\naxis(4, at=seq(40, 80, 10))\nbox(bty=\"u\")\nmtext(\"year\", side=1, line=2, cex=0.8)\nmtext(\"HPI\", side=2, line=2, las=0, cex=0.8)\nmtext(\"Life Exp\", side=4, line=2, las=0, cex=0.8)\ntext(4, 5, \"Bird 131\")\npar(mar=c(5.1, 4.1, 4.1, 2.1), col=\"black\", fg=\"black\", col.axis=\"black\")\n\n\n#Histogram\n\npar(mar=c(4.5, 4.1, 3.1, 0))\nhist(mydata$hpi, breaks=seq(floor(min(mydata$hpi)),\n                             ceiling(max(mydata$hpi))), \n     main=\"Height histogram\", xlab=\"HPI\", \n     col=\"gray\", freq=FALSE)\npar(mar=c(5.1, 4.1, 4.1, 2.1))\n\n\n\n#Barplot\nlibrary(dplyr)\n\nWarning: package 'dplyr' was built under R version 4.1.3\n\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\nmy_data3 <- my_data %>%\n  mutate(gdp_lev = ifelse(my_data$gdp >= 31202, 'high',\n                          ifelse(my_data$gdp >= 4985, 'middle',\n                                 'low')))\n\nsummary(my_data$hpi)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's \n  22.35   38.32   44.20   44.02   49.73   64.73      58 \n\nmy_data3 <- my_data3 %>%\n  mutate(hpi_lev = ifelse(my_data$hpi > 49, 'good',\n                          ifelse(my_data$hpi > 39, 'average',\n                                 'bad')))\n\ngdp_sub_h <- subset(my_data3, gdp_lev == \"high\")\naggregate(gdp_lev ~ hpi_lev, gdp_sub_h, length)\n\n  hpi_lev gdp_lev\n1 average     122\n2     bad      50\n3    good      75\n\ngdp_sub_m <- subset(my_data3, gdp_lev == \"middle\")\naggregate(gdp_lev ~ hpi_lev, gdp_sub_m, length)\n\n  hpi_lev gdp_lev\n1 average     223\n2     bad      96\n3    good     175\n\nhpi_le <- c(\"average\", \"bad\", \"good\")\nhigh <- c(122, 50, 75)\nmiddle <- c(223, 96, 175)\nlow <- c(85, 134, 28)\n\nbar_df <- data.frame(high, middle, low)\nrownames(bar_df)=hpi_le\n\npar(mar=c(2, 3.1, 2, 2.1))\nmidpts <- barplot(as.matrix(bar_df), names = rep(\"\", 3),\n                  col = c(\"white\", \"pink\", \"blue\"))\nlegend(\"topright\", inset=.02,\n       c(\"average\",\"bad\", \"good\"), fill = c(\"white\", \"pink\", \"blue\"), \n       horiz=FALSE, cex=0.5)\nmtext(\"GDP per capita\", side=3, line=0.0, cex=0.5)\nmtext(sub(\" \", \"\\n\", colnames(bar_df)),\n      at=midpts, side=1, line=0.5, cex=0.5)\n\npar(mar=c(5.1, 4.1, 4.1, 2.1))  \n\n#Boxplot\n\npar(mar=c(2, 4, 1, 0.5))\nboxplot(my_data3$hpi ~ my_data3$gdp_lev, data = my_data3,\n        boxwex = 0.4, at = 1:3 - 0.2,\n        subset= my_data3$hpi_lev == \"good\", col=\"pink\",\n        xlab=\"\",\n        ylab=\"HPI\", ylim=c(20,70))\nmtext(\"GDP per capita\", side=1, line=1.8, cex=0.5)\n\nboxplot(my_data3$hpi ~ my_data3$gdp_lev, data = my_data3, add = TRUE,\n        boxwex = 0.4, at = 1:3 + 0.2,\n        subset= my_data3$hpi_lev == \"bad\", col=\"red\")\nlegend(\"bottomleft\", inset=.02,\n       c(\"good\",\"bad\"), fill = c(\"pink\", \"red\"), horiz=TRUE, cex=0.5)\npar(mar=c(5.1, 4.1, 4.1, 2.1))\n\n# Piechart\npar(mar=c(0, 2, 1, 2), xpd=FALSE, cex=0.5)\npie.sales <- c(0.11, 0.06, 0.23, 0.11, 0.12, 0.37)\nnames(pie.sales) <- c(\"Africa\", \"Asia\",\n                      \"Europe\", \"Oceania\", \"Others\", \"South America\")\npie(pie.sales, col = rainbow(7))"
   },
   {
     "objectID": "assignments.html",
@@ -25,7 +25,7 @@
     "href": "index.html",
     "title": "Naela Elmore",
     "section": "",
-    "text": "par(family = \"sans\")\nplot(iris, pch=20, cex=.75, col=\"steelblue\")"
+    "text": "```{=html}\n<iframe width=“780” height=“500” src =“https://www.connectedpapers.com/main/9397e7acd062245d37350f5c05faf56e9cfae0d6/DeepFruits:-A-Fruit-Detection-System-Using-Deep-Neural-Networks/graph” title=“Literature map”</iframe>"
   },
   {
     "objectID": "research.html",
@@ -33,5 +33,12 @@
     "title": "Research",
     "section": "",
     "text": "Research interests are …"
+  },
+  {
+    "objectID": "research1.html",
+    "href": "research1.html",
+    "title": "Research",
+    "section": "",
+    "text": "<iframe width=\"780\" height=\"500\" src =\"https://app.litmaps.com/seed/2056512576?utm_source=litmaps&utm_content=home-seed\" title=\"Literature Map\"</iframe>"
   }
 ]
