@@ -23,9 +23,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Naela Elmore",
+    "title": "About Me",
     "section": "",
-    "text": "```{=html}\n<iframe width=“780” height=“500” src =“https://www.connectedpapers.com/main/9397e7acd062245d37350f5c05faf56e9cfae0d6/DeepFruits:-A-Fruit-Detection-System-Using-Deep-Neural-Networks/graph” title=“Literature map”</iframe>"
+    "text": "I am a PhD student at the University of Texas at Dallas’ School of Economic, Political, and Policy Sciences (EPPS).My research interests lie in the comparative politics; protests and social movements of the Southwest Asian and North African (SWANA) region.\nSpecifically, I seek to concretely explore the impacts of protest and social movement’s activity. Particularly, in terms of protest participation methods, campaign objectives and their achievement, and the involvement of state-repression in protest campaign success.\nBorn and raised in Cairo, Egypt; I have long been passionate about understanding the political and social dynamics of political behavior and participation in the SWANA region.\nWhen I am not buried under code and seminal works, I enjoy drinking caramel-flavored coffee, taking naps, and hiking."
   },
   {
     "objectID": "research.html",
@@ -47,5 +47,47 @@
     "title": "Assignment 3",
     "section": "",
     "text": "Using Other Packages\n\n#install.packages(\"ggplot\")\nlibrary(ggplot2)\n\nWarning: package 'ggplot2' was built under R version 4.1.3\n\nggplot(lm1, aes(x = x1, y = y1)) +\n  geom_point() +\n  labs(x = \"X1\", y = \"Y1 score\")\n\n\n\n\n\n# conditional plots\npar(mfrow=c(4,4)) #for multiple plot display\n\nlibrary(ggplot2)\n#install.packages(\"visreg\")\nlibrary(visreg)\n\nWarning: package 'visreg' was built under R version 4.1.3\n\nvisreg(lm1, \"x1\", gg = TRUE) \n\n\n\nvisreg(lm2, \"x2\", gg = TRUE)\n\n\n\nvisreg(lm3, \"x3\", gg = TRUE)\n\n\n\nvisreg(lm4, \"x4\", gg = TRUE)\n\n\n\n\n\n#Visualizing Regression model via Table\n#install.packages(\"stargazer\")\nlibrary(stargazer)\n\n\nPlease cite as: \n\n\n Hlavac, Marek (2022). stargazer: Well-Formatted Regression and Summary Statistics Tables.\n\n\n R package version 5.2.3. https://CRAN.R-project.org/package=stargazer \n\nstargazer(lm1, lm2, lm3, lm4, header=FALSE, type='text')\n\n\n====================================================================\n                                       Dependent variable:          \n                             ---------------------------------------\n                                y1        y2        y3        y4    \n                                (1)       (2)       (3)       (4)   \n--------------------------------------------------------------------\nx1                           0.500***                               \n                              (0.118)                               \n                                                                    \nx2                                     0.500***                     \n                                        (0.118)                     \n                                                                    \nx3                                               0.500***           \n                                                  (0.118)           \n                                                                    \nx4                                                         0.500*** \n                                                            (0.118) \n                                                                    \nConstant                      3.000**   3.001**   3.002**   3.002** \n                              (1.125)   (1.125)   (1.124)   (1.124) \n                                                                    \n--------------------------------------------------------------------\nObservations                    11        11        11        11    \nR2                             0.667     0.666     0.666     0.667  \nAdjusted R2                    0.629     0.629     0.629     0.630  \nResidual Std. Error (df = 9)   1.237     1.237     1.236     1.236  \nF Statistic (df = 1; 9)      17.990*** 17.966*** 17.972*** 18.003***\n====================================================================\nNote:                                    *p<0.1; **p<0.05; ***p<0.01"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Me",
+    "section": "",
+    "text": "I am a PhD student at the University of Texas at Dallas’ School of Economic, Political, and Policy Sciences (EPPS). My research interests lie in the comparative politics; protests and social movements of the Southwest Asian and North African (SWANA) region.\nSpecifically, I seek to concretely explore the impacts of protest and social movement’s activity. Particularly, in terms of protest participation methods, campaign objectives and their achievement, and the involvement of state-repression in protest campaign success.\nBorn and raised in Cairo, Egypt; I have long been passionate about understanding the political and social dynamics of political behavior and participation in the SWANA region.\nWhen I am not buried under code and seminal works, I enjoy drinking caramel-flavored coffee, taking naps, and hiking."
+  },
+  {
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications",
+    "section": "",
+    "text": "Dyadic Analysis of Fragile Middle Eastern States and Humanitarian Implications of Restrictive COVID-19 Policies\nHabib, D., Elmore, N., Gulas, S., Ruhde, N., Mathew, D., Parente, N.\nMiddle East Law and Governance (BRILL) (2022)."
+  },
+  {
+    "objectID": "publications.html#opinion-pieces-and-essays",
+    "href": "publications.html#opinion-pieces-and-essays",
+    "title": "Publications",
+    "section": "Opinion Pieces and Essays",
+    "text": "Opinion Pieces and Essays\nResearching the COVID-19 Pandemic: New Vistas and Data Limitations\nDaniel Habib & Naela Elmore.\nMiddle East Law and Governance (Brill) (2022).\nMiddle East and North Africa's COVID-19 Response\nNaela Elmore.\nCoronaNet Research Project (2020)."
+  },
+  {
+    "objectID": "publications.html#working-papers",
+    "href": "publications.html#working-papers",
+    "title": "Publications",
+    "section": "Working Papers",
+    "text": "Working Papers\nGrievance Resurgence - A Sentiment Analysis\nNaela Elmore\nNonviolent Resistance Campaigns - An Extended Temporal Examination\nNaela Elmore.\nNon-Violent Resistance Campaigns – A Temporal Examination\nNaela Elmore."
+  },
+  {
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "Comparative Politics\nSpring 2022\nUndergraduate Course"
+  },
+  {
+    "objectID": "teaching.html#teaching-assistant",
+    "href": "teaching.html#teaching-assistant",
+    "title": "Teaching",
+    "section": "Teaching Assistant",
+    "text": "Teaching Assistant\nCivil Liberties\nFall 2022\nUndergraduate Course\nComparative Politics\nSpring 2022.\nUndergraduate level course.\nProtests and Social Movements\nFall 2021.\nUndergraduate level course.\nInstitutions and Development\nFall 2021.\nGraduate level course."
   }
 ]
