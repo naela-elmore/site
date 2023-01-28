@@ -32,7 +32,7 @@
     "href": "research.html",
     "title": "Research",
     "section": "",
-    "text": "Research interests are …"
+    "text": "My project focuses on the Southwest and North African (SWANA) region, where states have experienced their fair share of protests, uprisings, and social movements. With the age of social media, and its increasing popularity within the region, we as researchers; can closely monitor citizen participation, grievance expression, and resurgence. This project specifically asks whether civil grievances resurface post initial-protest campaign success? This question stems from protest – both violent and nonviolent – and grievance literature, where we examine what the of issues the citizenry publicly dissents against, and the manners that utilized to make their dissent known to the state and its governing body. I specifically look at the trending topics in Lebanon, a state that is ripe with demonstrations, public grievance expression, and a particularly heavy utilizer of Twitter during times of social uprising. I will specifically examine two particular social movements within the state: the Arab Spring movement of 2011 and the most recent October Revolution of 2019. The reasoning behind these two movement selections, is purely comparative. Specifically, I want to examine whether the same issues and forms of grievances expressed from the 2011 movement are resurfacing nine years later on."
   },
   {
     "objectID": "research1.html",
@@ -67,7 +67,7 @@
     "href": "publications.html#opinion-pieces-and-essays",
     "title": "Publications",
     "section": "Opinion Pieces and Essays",
-    "text": "Opinion Pieces and Essays\nResearching the COVID-19 Pandemic: New Vistas and Data Limitations\nDaniel Habib & Naela Elmore.\nMiddle East Law and Governance (Brill) (2022).\nMiddle East and North Africa's COVID-19 Response\nNaela Elmore.\nCoronaNet Research Project (2020)."
+    "text": "Opinion Pieces and Essays\nResearching the COVID-19 Pandemic: New Vistas and Data Limitations\nDaniel Habib & Naela Elmore.\nMiddle East Law and Governance (Brill) (2022).\nMiddle East and North Africa’s COVID-19 Response\nNaela Elmore.\nCoronaNet Research Project (2020)."
   },
   {
     "objectID": "publications.html#working-papers",
@@ -89,5 +89,26 @@
     "title": "Teaching",
     "section": "Teaching Assistant",
     "text": "Teaching Assistant\nCivil Liberties\nFall 2022\nUndergraduate Course\nComparative Politics\nSpring 2022.\nUndergraduate level course.\nProtests and Social Movements\nFall 2021.\nUndergraduate level course.\nInstitutions and Development\nFall 2021.\nGraduate level course."
+  },
+  {
+    "objectID": "research.html#nonviolent-resistance-campaigns---an-extended-temporal-examination",
+    "href": "research.html#nonviolent-resistance-campaigns---an-extended-temporal-examination",
+    "title": "Research",
+    "section": "Nonviolent Resistance Campaigns - An Extended Temporal Examination",
+    "text": "Nonviolent Resistance Campaigns - An Extended Temporal Examination\n\nNaela Elmore\nThis contribution is an extension on the original paper, Nonviolent Resistance Campaigns – A Temporal Examination. As with the preceding work, this article replicates and extends Stephan and Chenoweth's (2013) article. This paper asks whether nonviolent resistance campaigns are temporally durable? This paper extends on nonviolent resistance literature, arguing that while such campaigns do achieve in the moment success in terms of campaign objective achievement, NVRCs do not sustain long-term success. Utilizing Stephan and Chenoweth's (2013) dataset, I replicate and temporally extend the large-N dataset, and find support for my argument. Countries that experienced successful NVRCs initially, ended up experiencing increased protest occurrences in the years following the initial NVRC success."
+  },
+  {
+    "objectID": "research.html#non-violent-resistance-campaigns-a-temporal-examination",
+    "href": "research.html#non-violent-resistance-campaigns-a-temporal-examination",
+    "title": "Research",
+    "section": "Non-Violent Resistance Campaigns – A Temporal Examination",
+    "text": "Non-Violent Resistance Campaigns – A Temporal Examination\n\nNaela Elmore\nAre nonviolent resistance campaigns temporally durable? This paper extends on nonviolent resistance literature, arguing that while such campaigns do achieve in the moment success in terms of campaign objective achievement, NVRCs do not sustain long-term success. Specifically, if a campaign utilizes nonviolent resistance means and encounters state-sponsored repression, whatever success it achieves in the moment, will not last in the long-term. This paper explores this theory through a mixedmethod approach, utilizing both comparative case analysis and statistical analysis. Through analyzing Lebanon and Nepal's NVRCs in 2005 and 2006 respectively, I find that both campaigns did not sustain long-term success and even had increased protest activity later on, with similar if not identical grievances protested ten years post-initial campaign success. Future iterations will explore the degree to which repression will affect long-term NVRC success, expand the scope coverage, and consider spatial element effects."
+  },
+  {
+    "objectID": "research.html#section",
+    "href": "research.html#section",
+    "title": "Research",
+    "section": "",
+    "text": "Nonviolent Campaigns and Regime Transitions - An Exploration of Democratic Durability and Longevity\n\nNaela Elmore\nThis paper set out to explore the durability effects of regime transitions, and the correlation between protests and instances of direct action with regimes transitioning and durability. By posing a temporal challenge to the original Celestino and Gleditsch (2013) article, I ask whether protest campaigns' identified effect on democratic transitioning, is temporally durable. Celestino and Gleditsch's (2013) presented the argument that nonviolent resistance campaigns (NVRCs) have a strong and positive effect on democratic transitioning. My analysis extends on the original dataset by including thirteen years of additional observations to the sample and supplies metrics of democratic quality and standard. Through which, I have found contradictory evidence to that of Celestino and Gleditsch(2013). Through regression analysis, I found NVRCs to have a negative effect on regime changes; contrastingly, I found violent protest campaigns to have a statistically significant and positive effect on regime transitioning. I additionally observed electoral and freedom of information to be strong predictors of regime change."
   }
 ]
